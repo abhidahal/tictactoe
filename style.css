@@ -193,7 +193,12 @@ table tr td:last-child {
 #play-again-button:hover {
   background: var(--blue-hover);
 }
-
+.footer {
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+}
 @media (max-width: 440px) {
   .titleBar {
     font-size: 1.5rem;
