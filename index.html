@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicTacToe</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/291c2f4fc7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="setup()">
+    <div class="titleBar">
+      <img src="res/logo.svg" alt="logo" />
+      TicTacToe
+    </div>
+    <div id="game-div">
+      <div class="row">
+        <div id="o-player-info" class="player-info-container circle">
+          <img src="res/circle.png" class="player-info-image" />
+          <span id="circle-player-wins">0</span>
+        </div>
+        <div id="x-player-info" class="player-info-container cross">
+          <img src="res/cross.png" class="player-info-image" />
+          <span id="cross-player-wins">0</span>
+        </div>
+      </div>
+      <table>
+        <tr>
+          <td id="field-0" onclick="fillField(0)"></td>
+          <td id="field-1" onclick="fillField(1)"></td>
+          <td id="field-2" onclick="fillField(2)"></td>
+        </tr>
+
+        <tr>
+          <td id="field-3" onclick="fillField(3)"></td>
+          <td id="field-4" onclick="fillField(4)"></td>
+          <td id="field-5" onclick="fillField(5)"></td>
+        </tr>
+
+        <tr>
+          <td id="field-6" onclick="fillField(6)"></td>
+          <td id="field-7" onclick="fillField(7)"></td>
+          <td id="field-8" onclick="fillField(8)"></td>
+        </tr>
+      </table>
+      <div id="line-0" class="horizontal-line" style="top: 148px"></div>
+      <div id="line-1" class="horizontal-line" style="top: 289px"></div>
+      <div id="line-2" class="horizontal-line" style="top: 433px"></div>
+      <div
+        id="line-3"
+        class="horizontal-line"
+        style="left: 65px; top: 88px"
+      ></div>
+      <div
+        id="line-4"
+        class="horizontal-line"
+        style="left: 208px; top: 88px"
+      ></div>
+      <div
+        id="line-5"
+        class="horizontal-line"
+        style="left: 352px; top: 88px"
+      ></div>
+      <div
+        id="line-6"
+        class="horizontal-line"
+        style="left: 67px; top: 149px"
+      ></div>
+      <div
+        id="line-7"
+        class="horizontal-line"
+        style="left: 350px; top: 150px"
+      ></div>
+      <div id="winning-container" class="hide">
+        <span id="winning-container-top-label">Player</span>
+        <img id="winning-container-img" src="res/circle.png" />
+        <span id="winning-container-bottom-label">won!</span>
+        <div id="play-again-button" onclick="resetAll()">Play again</div>
+      </div>
+    </div>
+  </body>
+</html>
